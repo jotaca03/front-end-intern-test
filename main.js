@@ -1,32 +1,33 @@
-// Adicionamos nosso código dentro de uma função anônima para evitar
-// variáveis globais.
-(function() {
-  // Elemento principal do formulário
-  const contactForm = document.getElementById('contact');
+console.log('it works')
 
-  // Campos do formulário
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('message');
+$(document).ready(function () {
+  $('.submit').click(function (event) {
+    event.preventDefault()
+    console.log('clicked botton')
 
-  // "addEventListener" instrui o navegador a executar uma função sempre
-  // que um evento específico acontece. Nesse caso, a função abaixo será
-  // executada toda vez que o botão de envio for pressionado.
-  contactForm.addEventListener('submit', function() {
-    // A propriedade "value" contém o valor atual de um input ou textarea
-    const nameValue = nameInput.value;
+    var name = $('#name').val()
+    var email = $('#email').val()
+    var message = $('#message').val()
+    var statusElm = $('.status')
+    statusElm.empty()
 
-    // A propriedade "length" contém o tamanho (em caracteres) de uma
-    // uma string. Toda string contém essa propriedade.
-    const nameLength = nameValue.length;
-
-    // "window" é um objeto global que representa a janela (ou aba) do
-    // navegador que está executando o código do seu site. O método
-    // "alert" simplesmente mostra um aviso para o usuário contendo a
-    // mensagem provida.
-    window.alert(`Botão enviar clicado! Conteúdo do campo nome: ${nameValue} (${nameLength} caracteres)`);
-
-    // Altere e complete essa função para validar os campos do formulário
-    // de acordo com as especificações do teste. Boa sorte!
-  });
-})();
+    if(name.lenght > 2) {
+      statusElm.append('<div>Name is valid</div>')
+    } else {
+      event.preventDefault()
+      statusElm.append('<div>Name is not valid</div>')
+    }
+    if(email.lenght > 5 && email.includes('@') && email.includes('.')) {
+      statusElm.append('<div>Email is valid</div>')
+    } else {
+      event.preventDefault()
+      statusElm.append('<div>Email is not valid</div>')
+    }
+    if(message.lenght > 20) {
+       statusElm.append('<div>Message is valid</div>')
+    } else {
+      event.preventDefault()
+      statusElm.append('<div>Message is not valid</div>')
+    }
+  })
+})

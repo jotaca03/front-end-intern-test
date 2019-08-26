@@ -4,9 +4,88 @@
 /* font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
+body {
+    text-align: center;
+    margin: 0 auto;
+    background: url(https://github.com/jotaca03/front-end-intern-test/blob/master/assets/04-BG.png?raw=true);
+}
 
 h1 {
     font-family: 'Cookie', cursive;
     font-size: 71px;
-    color: purple;
+    color: white;
+    font-weight: 200;
+    max-width: 6em;
+    position: relative;
+    left: 6.5em;
+    margin-bottom: 17px;
 }
+
+.nav {
+    display: table;
+    width: 100%;
+    margin: auto;
+    height: 4em;
+    background-color:rgb(148, 209, 180);
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 12px;
+    
+}
+
+.survey {
+    margin-bottom: 20px;
+    display: flex;
+    width: 30em;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+}
+
+.survey::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    padding-left: 10px;
+}
+
+.container {
+    align-items: center;
+	max-width: 400px;
+	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    height: 3em;
+}
+
+#email {
+    height: 3em;
+}
+
+#message {
+    height: 9em;
+}
+
+#send {
+    height: 4em;
+    text-align: center;
+    width: 30em;
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 1px 2px darkcyan;
+}
+
+#send::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+}
+
+
+
+
+
+
