@@ -7,29 +7,35 @@
 body {
     text-align: center;
     margin: 0 auto;
-    background: url(https://github.com/jotaca03/front-end-intern-test/blob/master/assets/04-BG.png?raw=true);
+    background-image: url(./assets/04-BG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    
 }
-
 h1 {
     font-family: 'Cookie', cursive;
     font-size: 71px;
-    color: white;
-    font-weight: 200;
-    max-width: 6em;
-    position: relative;
-    left: 6.5em;
-    margin-bottom: 17px;
+    color: #e3edcb;
+    font-weight: 300;
+    line-height: 80%;
+    text-align: center;
+    margin: 0 auto;
 }
-
+.title{
+    margin: 6em 0 2em 0;
+}
 .nav {
     display: table;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     height: 4em;
-    background-color:rgb(148, 209, 180);
-    font-family: 'Open Sans', sans-serif;
-    padding-top: 12px;
-    
+    background-color:#acd0b6;
+    padding-top: 12px;    
+}
+.logo{
+    padding-top: 5px;
 }
 
 .survey {
@@ -83,9 +89,63 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
 }
+.messages{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.msgSucess{
+    display: block;
+    height: 20px;
+    text-align: center;
+    width: 15em;
+    background-color: #53a068;
+    border-radius: 10px;
+    color: #ffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    
+}
+.msgError{
+    display: block;
+    height: 20px;
+    text-align: center;
+    width: 15em;
+    background-color: red;
+    border-radius: 10px;
+    color: #ffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+@media(max-width: 568px){
+    .survey{
+        width: 25em;
+    }
+    #send{
+        width: 25em;
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .title{
+        margin: 3em 0 2em 0;
+    }
+}
 
-
-
+@media(max-width: 320px){
+    body{
+        height: 100%;
+    }
+    .survey{
+        width: 20em;
+    }
+    #send{
+        width: 20em;
+        margin-bottom: 20px;
+    }
+}
 
 
 
